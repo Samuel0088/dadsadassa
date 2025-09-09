@@ -48,7 +48,7 @@ const PlanejadorRotas = () => {
         
         {/* Título */}
         <h1 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-800 to-indigo-700 bg-clip-text text-transparent">
-          Planeje sua rota
+          Planeje sua rota - EMTU
         </h1>
          
         {/* Inputs de Origem e Destino */}
@@ -140,10 +140,10 @@ const PlanejadorRotas = () => {
             
             <div className="space-y-2">
               {[
-                {numero: '600', rota: 'Americana → Santa Bárbara D\'Oeste', tipo: 'emtu'},
-                {numero: '123', rota: 'Terminal Centro → UFSP', tipo: 'sou'},
-                {numero: '687', rota: 'Americana → Santa Bárbara D\'Oeste', tipo: 'emtu'},
-                {numero: '010', rota: 'Circular Norte', tipo: 'sou'}
+                {numero: '620', rota: 'Americana → Santa Bárbara D\'Oeste', tipo: 'emtu'},
+                {numero: '208', rota: 'Jardim da Paz / Antônio Zanaga', tipo: 'sou'},
+                {numero: '631', rota: 'Santa Bárbara D\'Oeste  → Americana', tipo: 'emtu'},
+                {numero: '118', rota: 'Antônio Zanaga / Novo Mundo', tipo: 'sou'}
               ].map((sugestao, index) => (
                 <div 
                   key={index}

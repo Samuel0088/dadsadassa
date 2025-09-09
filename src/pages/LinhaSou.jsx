@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SegundoCabecalho from '../components/SegundoCabecalho/SegundoCabecalho.jsx';
+import CabecalhoSou from '../components/CabecalhoSou/CabecalhoSou.jsx';
 
 function LinhaSou() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -50,7 +50,7 @@ function LinhaSou() {
 
   return (
     <>
-      <SegundoCabecalho />
+      <CabecalhoSou />
       <div style={{ paddingTop: '80px', paddingBottom: '40px', minHeight: '100vh', backgroundColor: '#f9fafb' }}>
         <div style={{ maxWidth: '1024px', margin: '0 auto', padding: '0 20px' }}>
           
@@ -231,7 +231,7 @@ function LinhaSou() {
                 </svg>
               </div>
               <h4 style={{ fontWeight: '600', color: '#1f2937', marginBottom: '8px' }}>Tarifas</h4>
-              <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>R$ 4,50 tarifa comum. Meia-tarifa para estudantes e idosos.</p>
+              <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>R$ 5,20 tarifa comum. Meia-tarifa para estudantes e idosos.</p>
             </div>
 
             <div style={{ backgroundColor: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', border: '1px solid #e5e7eb' }}>

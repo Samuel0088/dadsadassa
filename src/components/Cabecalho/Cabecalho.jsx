@@ -34,7 +34,7 @@ const Cabecalho = () => {
 
   return (
     <>
-      <header className="fixed top-5 left-5 right-5 z-[9999] min-h-[100px] p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
+      <header className="fixed top-5 left-5 right-5 z-[9999] min-h-[100px] max-h-[180px] p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
         <nav className="px-4 lg:px-6 py-3">
           <div className="flex flex-wrap justify-between items-center mx-auto">
             <Link to={user ? "/home" : "/"} className="flex items-center">
@@ -46,11 +46,11 @@ const Cabecalho = () => {
               {user ? (
                 <>
                   <div className="hidden md:flex items-center py-1 px-3 rounded-full bg-gray-200 text-black text-sm font-medium">
-                    <span>Olá, {user.name}</span>
+                    <span>{user.name}</span>
                   </div>
                   <button 
                     onClick={handleLogout}
-                    className="hidden md:block text-black hover:bg-white/10 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 focus:outline-none"
+                    className="hidden md:block text-black bg-gray-300 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 focus:outline-none"
                   >
                     Sair
                   </button>
@@ -110,20 +110,26 @@ const Cabecalho = () => {
                     EMTU
                   </Link>
                 </li>
-                <li>
-                  <Link 
-                    to="/Bilheteria" 
-                    className="block py-2 text-black hover:text-primary-300"
-                  >
-                    Bilheteria
-                  </Link>
-                </li>
+               <Link 
+               to="/bilheteria" 
+               className="block py-2 text-black hover:text-primary-300"
+               >  Bilheteria
+                </Link>
                 <li>
                   <Link 
                     to="/Status" 
                     className="block py-2 text-black hover:text-primary-300"
                   >
                     Status
+                  </Link>
+                </li>
+
+                 <li>
+                  <Link 
+                    to="/acessibilidade" 
+                    className="block py-2 text-black hover:text-primary-300"
+                  >
+                    Acessibilidade
                   </Link>
                 </li>
               </ul>
@@ -176,7 +182,7 @@ const Cabecalho = () => {
                       </span>
                     </div>
                     <div>
-                      <p className="text-white font-medium">Olá, {user.name}</p>
+                      <p className="text-white font-medium">{user.name}</p>
                     </div>
                   </div>
                 </div>
@@ -204,13 +210,12 @@ const Cabecalho = () => {
                       <span className="font-medium">EMTU</span>
                     </Link>
                     
-                    <Link 
-                      to="/Bilheteria" 
-                      onClick={fechar}
-                      className="flex items-center py-4 px-4 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 group"
+                   <Link 
+                        to="/bilheteria" 
+                        onClick={fechar}
+                        className="flex items-center py-4 px-4 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 group"
                     >
-                    
-                      <span className="font-medium">Bilheteria</span>
+                        <span className="font-medium">Bilheteria</span>
                     </Link>
                     
                     <Link 
@@ -219,6 +224,14 @@ const Cabecalho = () => {
                       className="flex items-center py-4 px-4 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 group"
                     >
                       <span className="font-medium">Status</span>
+                    </Link>
+
+                     <Link 
+                      to="/acessibilidade" 
+                      onClick={fechar}
+                      className="flex items-center py-4 px-4 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 group"
+                    >
+                      <span className="font-medium">Acessibilidade</span>
                     </Link>
                     
                     {/* Seção de autenticação */}

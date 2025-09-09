@@ -15,7 +15,7 @@
         .container {
             display: flex;
             flex-wrap: wrap;
-            margin-top: 150px;
+            margin-top: 200px;
             justify-content: space-between;
             align-items: center;
             gap: 2rem;

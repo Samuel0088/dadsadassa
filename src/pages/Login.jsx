@@ -66,7 +66,7 @@ export default function Login() {
       const userInfo = jwtDecode(token);
       console.log("Dados do Google:", userInfo);
 
-      // Chama a função de login do Google
+      // Chama a função de login do Google (do seu contexto)
       const result = await loginWithGoogle(userInfo);
       
       if (result && result.success) {
@@ -79,7 +79,6 @@ export default function Login() {
       setError("Erro ao processar login do Google");
     }
   };
-
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -102,25 +101,10 @@ export default function Login() {
               </div>
             )}
 
-            {/* LOGIN COM GOOGLE - CORRIGIDO */}
+            {/* LOGIN COM GOOGLE */}
             <div className="w-full flex justify-center mt-4">
               <GoogleLogin
-               onSuccess={(credentialResponse) => {
-                const token = credentialResponse.credential;
-                if (token) {
-                  try {
-                    const userInfo = decodeJWT(token);
-                    console.log("Dados do Google:", userInfo);
-                    loginWithGoogle(userInfo);
-                    navigate("/home");
-                  } catch (error) {
-                    console.error("Erro ao decodificar token:", error);
-                    setError("Erro ao processar login do Google");
-                  }
-                } else {
-                  setError("Token não recebido do Google");
-                }
-              }}
+                onSuccess={handleGoogleLogin}
                 onError={() => {
                   console.log("Erro no login do Google");
                   setError("Não foi possível fazer login com o Google");

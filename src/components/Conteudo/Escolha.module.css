@@ -1,0 +1,292 @@
+.rotas{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.centro{
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+.hero{
+  background:var(--white);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:24px;
+  position:relative;
+  overflow:hidden;
+}/* escolha.module.css */
+.planejadorContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.planejadorContainer h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #004B87;
+  text-align: center;
+}
+
+.fundoPlaneja {
+  background-color: #ffffff;
+  padding: 30px 50px 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.rotaInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 0 80px; /* ESPAÇAMENTO LATERAL AUMENTADO */
+}
+
+/* Inputs de origem e destino - FOCO NAS LATERAIS */
+.origemInput, .destinoInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px; /* ESPAÇAMENTO LATERAL AUMENTADO */
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  margin: 0 40px; /* ESPAÇAMENTO LATERAL AUMENTADO */
+}
+
+.destinoInput {
+  position: relative;
+}
+
+.localTexto {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  padding: 0 20px; /* ESPAÇAMENTO LATERAL AUMENTADO */
+  flex-grow: 1; /* Permite que o texto ocupe mais espaço */
+}
+
+.botaoTrocar {
+  background-color: #004B87;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  flex-shrink: 0; 
+  margin-left: 10px;
+}
+
+.badgeIl {
+  background-color: #004B87;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge{
+  background-color: #004B87;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.botaoTrocar {
+  background-color: #004B87;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botaoVerOpcoes {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+}
+
+.botaoVerOpcoes:hover {
+  background-color: #3949ab;
+}
+
+.opcoesContainer {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.gridOpcoes {
+  display: grid;
+  background-color: #ffffff;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.opcaoCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.opcaoCard h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #004B87;
+}
+
+.opcaoCard p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.sugestoesRapidas h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.sugestaoItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
+.sugestaoNumero {
+  font-weight: bold;
+  margin-right: 10px;
+  min-width: 40px;
+  color: #004B87;
+}
+
+.sugestaoRota {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.sugestaoTipo {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.emtu {
+  background-color: #004B87;
+  color: white; 
+}
+
+.sou {
+  background-color: #FBC02D;
+  color: #333;
+}
+.botaoTrocarRota {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom right, #1e3a8a, #4338ca);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 30;
+  border: 3px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 600px) {
+
+  .fundoPlaneja {
+    padding: 20px;
+  }
+  
+  .gridOpcoes {
+    grid-template-columns: 1fr;
+  }
+  
+  .sugestaoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .sugestaoTipo {
+    align-self: flex-end;
+  }
+  
+  .planejadorContainer h1 {
+    font-size: 20px;
+  }
+  
+  .localTexto {
+    font-size: 14px;
+  }
+}
+.hero .badge{
+    position:absolute; 
+    right:16px; 
+    top:16px; 
+    background:var(--teal); 
+    color:#fff; 
+    padding:6px 10px; 
+    border-radius:999px; 
+    font-size:11px; 
+    font-weight:700
+}
+.hero h1{
+    font-size:24px; 
+    margin:0 0 12px
+}
+.fields{
+	display:flex; 
+	flex-direction:row; 
+	gap:12px; 
+	margin-top:12px
+}
+
+.stripe{position:absolute; inset:auto auto 0 0; height:4px; width:100%;}
+.stripeblue{background:var(--blue)}
+    .stripeteal{background:var(--teal)}
+    .stripeyellow{background:var(--yellow)}
+    .stripegreen{background:var(--green)}

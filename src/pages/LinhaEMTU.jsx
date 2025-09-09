@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TerceiroCabecalho from '../components/TerceiroCabecalho/TerceiroCabecalho.jsx';
+import CabecalhoEMTU from '../components/CabecalhoEMTU/CabecalhoEMTU.jsx';
 
 function LinhaEMTU() {
   const [origem, setOrigem] = useState('');
@@ -91,7 +91,7 @@ function LinhaEMTU() {
 
   return (
     <>
-      <TerceiroCabecalho />
+      <CabecalhoEMTU />
       <div style={{ paddingTop: '80px', paddingBottom: '40px', minHeight: '100vh', backgroundColor: '#f9fafb' }}>
         <div style={{ maxWidth: '1024px', margin: '0 auto', padding: '0 20px' }}>
           
@@ -307,7 +307,7 @@ function LinhaEMTU() {
                 </svg>
               </div>
               <h4 style={{ fontWeight: '600', color: '#1f2937', marginBottom: '8px' }}>Tarifas EMTU</h4>
-              <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>R$ 5,50 tarifa comum. Meia-tarifa para estudantes, idosos e PCDs.</p>
+              <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>R$ 5,70 tarifa comum. Meia-tarifa para estudantes, idosos e PCDs.</p>
             </div>
 
             <div style={{ backgroundColor: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', border: '1px solid #e5e7eb' }}>
