@@ -431,7 +431,7 @@ cvv: ''
         
         .bilheteria-container {
           min-height: 100vh;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background-color:#2563eb;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           color: #333;
         }
@@ -580,7 +580,7 @@ cvv: ''
         
         /* Container das etapas */
         .etapa-container {
-          background-color: white;
+          background-color:#fafafa;
           padding: 2.5rem;
           border-radius: 16px;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

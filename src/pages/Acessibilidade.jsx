@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Footer } from "../components/Footer/Footer";
 import Logo_branca from '../assets/Imagens/Logo_branca.png';
+import Logo from '../assets/Imagens/Logo.png'
+import styles from '../components/Footer/Footer.module.css'
 
 export default function AcessibilidadeOnibus({ user, handleLogout }) {
   // Estados para controle de acessibilidade
@@ -89,8 +90,8 @@ export default function AcessibilidadeOnibus({ user, handleLogout }) {
           {/* Navegação principal */}
           <nav className="hidden md:flex space-x-10 text-lg">
             <Link to="/Home" className="hover:text-gray-300 transition-all">Home</Link>
-            <Link to="/ LinhaSou" className="hover:text-gray-300 transition-all">SOU</Link>
-            <Link to="/LinnhaEMTU" className="hover:text-gray-300 transition-all">EMTU</Link>
+            <Link to="/LinhaSou" className="hover:text-gray-300 transition-all">SOU</Link>
+            <Link to="/LinhaEMTU" className="hover:text-gray-300 transition-all">EMTU</Link>
             <Link to="/Bilheteria" className="hover:text-gray-300 transition-all">Bilheteria</Link>
             <Link to="/Status" className="hover:text-gray-300 transition-all">Status</Link>
           </nav>
@@ -354,11 +355,185 @@ export default function AcessibilidadeOnibus({ user, handleLogout }) {
             </div>
           </div>
         </section>
+
+        {/* NOVA SEÇÃO: Legislação e Normas */}
+        <section className="my-8">
+          <h2 className="text-2xl font-bold mb-4">Legislação e Normas de Acessibilidade</h2>
+          <div className={`p-6 rounded-lg shadow ${highContrast ? "bg-gray-900 border-2 border-yellow-400" : "bg-white"}`}>
+            <p className="mb-4">
+              O transporte acessível é garantido por lei no Brasil. Conheça os principais dispositivos legais que protegem seus direitos:
+            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <span className="font-semibold">Lei nº 10.098/2000:</span> Estabelece normas gerais e critérios básicos para a promoção da acessibilidade.
+              </li>
+              <li>
+                <span className="font-semibold">Lei nº 12.587/2012:</span> Institui as diretrizes da Política Nacional de Mobilidade Urbana, priorizando o transporte acessível.
+              </li>
+              <li>
+                <span className="font-semibold">Decreto nº 5.296/2004:</span> Regulamenta as leis sobre acessibilidade, com prazos e especificações técnicas.
+              </li>
+              <li>
+                <span className="font-semibold">Norma ABNT NBR 9050:</span> Estabelece critérios técnicos para acessibilidade em edificações, mobiliário e espaços urbanos.
+              </li>
+            </ul>
+            <div className="mt-4 p-4 rounded-md bg-blue-50 border border-blue-200">
+              <p className="text-blue-800">
+                <span className="font-bold">Importante:</span> Em caso de não cumprimento das normas de acessibilidade, 
+                você pode registrar uma reclamação junto à ouvidoria da empresa de transporte ou aos órgãos de defesa do consumidor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* NOVA SEÇÃO: Perguntas Frequentes */}
+        <section className="my-8">
+          <h2 className="text-2xl font-bold mb-4">Perguntas Frequentes</h2>
+          <div className={`p-6 rounded-lg shadow ${highContrast ? "bg-gray-900 border-2 border-yellow-400" : "bg-white"}`}>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Posso viajar com meu cão-guia no ônibus?</h3>
+                <p>Sim, cães-guias são permitidos por lei em todos os veículos de transporte público, sem necessidade de pagar taxa adicional.</p>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold mb-2">O que fazer se o elevador ou rampa do ônibus não estiver funcionando?</h3>
+                <p>Você deve registrar imediatamente uma reclamação junto à empresa de transporte. Por lei, eles devem oferecer uma alternativa segura para seu embarque ou providenciar outro veículo acessível.</p>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Há desconto para pessoas com deficiência no transporte público?</h3>
+                <p>Sim, a maioria das cidades brasileiras oferece tarifa reduzida ou gratuidade para pessoas com deficiência comprovada. Consulte a empresa operadora de sua região para obter informações sobre como solicitar o benefício.</p>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Posso exigir que um passageiro libere o assento preferencial?</h3>
+                <p>Sim, os assentos preferenciais são destinados por lei a idosos, pessoas com deficiência, gestantes e pessoas com mobilidade reduzida. Em caso de resistência, acione o motorista ou fiscal do veículo.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NOVA SEÇÃO: Contatos Úteis */}
+        <section className="my-8">
+          <h2 className="text-2xl font-bold mb-4">Contatos Úteis</h2>
+          <div className={`p-6 rounded-lg shadow ${highContrast ? "bg-gray-900 border-2 border-yellow-400" : "bg-white"}`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Ouvidorias</h3>
+                <ul className="space-y-2">
+                  <li className="flex justify-between items-center">
+                    <span>EMTU</span>
+                    <span className="font-semibold">0800-770-5555</span>
+                  </li>
+                  <li className="flex justify-between items-center">
+                    <span>Secretaria de Transportes</span>
+                    <span className="font-semibold">(11) 3333-3333</span>
+                  </li>
+                  <li className="flex justify-between items-center">
+                    <span>Procon</span>
+                    <span className="font-semibold">151</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Aplicativos Úteis</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <span className="font-semibold">BusHelper:</span> Informa em tempo real a acessibilidade dos ônibus nas paradas
+                  </li>
+                  <li>
+                    <span className="font-semibold">AccessMap:</span> Rotas acessíveis para pessoas com mobilidade reduzida
+                  </li>
+                  <li>
+                    <span className="font-semibold">Moovit:</span> App de transporte público com informações de acessibilidade
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-   
+    <footer className={highContrast ? "bg-black" : styles.footer}>
+      <div className={`${styles.container} ${styles.sides}`}>
+        <div className={styles.leftSide}>
+          <div className={styles.logo}>
+            <img 
+              src={highContrast ? Logo_branca : Logo} 
+              className="star" 
+              style={{ height: "70px", width: "auto" }} 
+              alt="Logo Mobiliza Vida" 
+            />
+            <div style={{ color: highContrast ? "#FFFF00" : "#2c2c2c" }}>Mobiliza Vida</div>
+          </div>
+ 
+          <p className={`${styles.p} ${styles.leftSide}`}>
+            <a className={highContrast ? "text-yellow-300" : styles.linkFooter} href="../linhaEMTU/linhaEMTU.html">EMTU</a>
+            <a className={highContrast ? "text-yellow-300" : styles.linkFooter} href="../linhaSOU/linhaSOU.html">SOU</a>
+            <a className={highContrast ? "text-yellow-300" : styles.linkFooter} href="">Status</a>
+            <a className={highContrast ? "text-yellow-300" : styles.linkFooter} href="">Cartões</a>
+          </p>
+        </div>
+
+       <div className={styles.rightSide}>
+  <ul className={styles.menu}>
+    <li>
+      <a 
+        style={{ color: highContrast ? "#fcd34d" : "#1e40af" }} 
+        href="#"
+      >
+        Companhia
+      </a>
+    </li> 
+    <li>
+      <a 
+        style={{ color: highContrast ? "#fcd34d" : "#1e40af" }} 
+        href="#"
+      >
+        Ajuda
+      </a>
+    </li> 
+    <li>
+      <a 
+        style={{ color: highContrast ? "#fcd34d" : "#1e40af" }} 
+        href="#"
+      >
+        Suporte
+      </a>
+    </li> 
+    <li>
+      <a 
+        style={{ color: highContrast ? "#fcd34d" : "#1e40af" }} 
+        href="#"
+      >
+        Serviços
+      </a>
+    </li>
+    <li>
+      <a 
+        style={{ color: highContrast ? "#fcd34d" : "#1e40af" }} 
+        href="#"
+      >
+        Política&nbsp;de&nbsp;Privacidade
+      </a>
+    </li>
+  </ul>
+</div>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.rightSide}>
+          <p style={{ color: highContrast ? "#FFFFFF" : "" }}>&copy; Mobiliza Vida copyright 2025. Todos os direitos reservados</p>
+        </div>
+        <div className={`${styles.rightSide} ${styles.center}`}>
+          <p style={{ color: highContrast ? "#FFFFFF" : "" }}>Termos e Condições</p>
+        </div>
+      </div>
+    </footer>
     </div>
-      <Footer/>
+     
       </>
   );
 }
