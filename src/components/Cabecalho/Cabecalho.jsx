@@ -34,7 +34,7 @@ const Cabecalho = () => {
 
   return (
     <>
-      <header className="fixed top-5 left-5 right-5 z-[9999] min-h-[100px] max-h-[180px] p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
+      <header className="fixed top-5 left-5 right-5 z-[100000] min-h-[100px] max-h-[180px] p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
         <nav className="px-4 lg:px-6 py-3">
           <div className="flex flex-wrap justify-between items-center mx-auto">
             <Link to={user ? "/home" : "/"} className="flex items-center">
@@ -140,7 +140,7 @@ const Cabecalho = () => {
 
       {/* Menu Mobile - Renderizado fora do header */}
       {menuAtivo && (
-        <div className="fixed inset-0 z-[10000] md:hidden">
+        <div className="fixed inset-0 z-[100000] md:hidden">
           {/* Overlay com backdrop */}
           <div 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"

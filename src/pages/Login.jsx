@@ -167,13 +167,6 @@ export default function Login() {
                 </Link>
               </p>
             </div>
-
-            {/* Credenciais de teste */}
-            <div className="mt-4 p-3 bg-gray-100 rounded-lg text-center">
-              <p className="text-xs text-gray-600 font-semibold">Usuário de teste:</p>
-              <p className="text-xs text-gray-600">Email: teste@email.com</p>
-              <p className="text-xs text-gray-600">Senha: 123456</p>
-            </div>
           </div>
         </div>
 
