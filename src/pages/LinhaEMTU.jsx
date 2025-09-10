@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CabecalhoEMTU from '../components/CabecalhoEMTU/CabecalhoEMTU.jsx';
+import { Footer } from '../components/Footer/Footer.jsx';
 
 function LinhaEMTU() {
   const [origem, setOrigem] = useState('');
@@ -323,6 +324,8 @@ function LinhaEMTU() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

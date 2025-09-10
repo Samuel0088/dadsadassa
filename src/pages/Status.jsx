@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import styles from './Status.module.css';
 import CabecalhoSou from '../components/CabecalhoSou/CabecalhoSou.jsx';
 import { Footer } from '../components/Footer/Footer.jsx';
-import { styleFooter } from '../components/Footer/Footer.module.css';
 
 export default function RatingApp() {
   const [reviews, setReviews] = useState([]);
@@ -107,10 +106,7 @@ export default function RatingApp() {
   return (
     <div className={styles.app}>
       {/* Header */}
-      <>
       <CabecalhoSou />
-    
-    </>
 
       {/* Hero Section */}
       <section className={styles.hero}>
@@ -224,9 +220,6 @@ export default function RatingApp() {
         </div>
       </section>
       
-      {/* Footer */}
-      <Footer className={styles.styleFooter} />
-    
       {/* Toast Notification */}
       {toast.show && (
         <div className={`${styles.toast} ${styles[toast.type]} ${styles.show}`}>
@@ -234,6 +227,9 @@ export default function RatingApp() {
           <span>{toast.message}</span>
         </div>
       )}
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

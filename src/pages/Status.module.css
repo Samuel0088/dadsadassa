@@ -322,6 +322,10 @@ textarea.formControl {
   display: flex;
   gap: 5px;
 }
+.styleFooter {
+  background-color: #EBEBEC;
+  padding: 2rem 0;
+}
 
 .avaliacaoTexto {
   color: var(--dark);

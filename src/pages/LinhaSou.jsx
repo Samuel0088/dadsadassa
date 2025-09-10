@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CabecalhoSou from '../components/CabecalhoSou/CabecalhoSou.jsx';
+import { Footer } from '../components/Footer/Footer.jsx';
 
 function LinhaSou() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -247,6 +248,8 @@ function LinhaSou() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
